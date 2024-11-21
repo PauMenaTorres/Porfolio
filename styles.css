@@ -4,8 +4,14 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    color: #f4f4f9; /* Light gray text for readability */
-    background: #121212; /* Very dark gray for a sleek, modern background */
+    color: #f4f4f9;
+    background: #121212;
+}
+
+/* Root Variables for Animations */
+:root {
+    --neon-color: #9b59b6;
+    --hover-scale: 1.1;
 }
 
 /* Barra de navegación */
@@ -18,6 +24,7 @@ body {
     padding: 1rem;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    animation: smoothFade 2s ease-in-out;
 }
 
 .navbar ul {
@@ -33,37 +40,76 @@ body {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
-    transition: color 0.3s;
+    transition: color 0.3s, transform 0.3s;
 }
 
 .navbar a:hover {
-    color: #9b59b6; /* Hover effect color */
+    color: var(--neon-color);
+    transform: scale(1.1);
+    animation: rotateScale 0.5s ease-in-out;
 }
 
-/* Espaciado en las secciones para que no se sobrepongan con el navbar */
+/* Espaciado en las secciones */
 section {
     margin: 3rem 0;
-    padding-top: 3.5rem; /* Ajuste para compensar la barra de navegación fija */
+    padding-top: 3.5rem;
 }
 
 header {
     text-align: center;
     padding: 2.5rem;
-    background: #2a2a3f; /* Dark, muted purple-gray */
+    background: #2a2a3f;
     color: #fff;
-    animation: fade-in 1.5s ease-in-out;
+    animation: fade-in 1.5s ease-in-out, smoothFade 2s ease-in-out;
 }
 
 header h1 {
-    font-size: 2.8rem;
-    color: #9b59b6; /* Softer lavender purple */
+    font-size: 3rem; /* Puedes ajustar el tamaño */
+    color: #2e0339;
     position: relative;
-    animation: neonGlow 1.5s ease-in-out infinite alternate; /* Animación de neón */
+    font-weight: bold;
+    animation: neonGlowEnhanced 3s infinite alternate, textShake 2s infinite ease-in-out;
+    text-shadow: 0 0 5px #5e0d77, 0 0 10px #7d338f, 0 0 15px #9b50b9, 0 0 20px #9b50b9, 0 0 25px #9b50b9, 0 0 30px #9b50b9, 0 0 35px #9b50b9;
 }
+
+@keyframes neonGlowEnhanced {
+    0% {
+        text-shadow: 0 0 5px #5e0d77, 0 0 10px #7d338f, 0 0 15px #9b50b9, 0 0 20px #9b50b9;
+        transform: scale(1) rotate(0deg);
+    }
+    50% {
+        text-shadow: 0 0 15px #9b50b9, 0 0 25px #9b50b9, 0 0 30px #7d338f, 0 0 35px #5e0d77;
+        transform: scale(1.2) rotate(3deg); /* Leve ligera rotación */
+    }
+    100% {
+        text-shadow: 0 0 5px #5e0d77, 0 0 10px #7d338f, 0 0 15px #9b50b9, 0 0 20px #9b50b9;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+@keyframes textShake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    75% {
+        transform: translateX(-3px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
 
 header p {
     font-size: 1.2rem;
-    color: #b0b0b0; /* Light gray for a subtle contrast */
+    color: #b0b0b0;
+    animation: smoothFade 1.5s ease-in-out;
 }
 
 main {
@@ -75,9 +121,8 @@ main {
 section h2 {
     text-align: center;
     margin-bottom: 1.5rem;
-    color: #a6a6d6; /* Light, soft lavender for section titles */
+    color: #a6a6d6;
     font-size: 2.2rem;
-    animation: bounce 1.5s infinite alternate;
 }
 
 /* Project Grid */
@@ -88,48 +133,51 @@ section h2 {
 }
 
 .project {
-    background: #1f1f2e; /* Darker base for project cards */
+    background: #1f1f2e;
     padding: 1.5rem;
-    border: 1px solid #5a5a7f; /* Muted purple-gray border */
+    border: 1px solid #5a5a7f;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     text-align: center;
-    transition: transform 0.3s, background 0.3s;
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+    animation: smoothFade 2s ease-in-out;
+    will-change: transform;
 }
 
 .project a {
     text-decoration: none;
-    color: #8e44ad; /* Rich purple for links */
+    color: var(--neon-color);
     font-weight: bold;
     position: relative;
     z-index: 1;
-    transition: color 0.3s;
+    transition: color 0.3s, transform 0.3s;
 }
 
 .project a:hover {
-    color: #9b59b6; /* Lighter lavender on hover */
-    text-shadow: 0 0 8px #9b59b6, 0 0 15px #9b59b6; /* Neon glow effect */
+    color: var(--neon-color);
+    text-shadow: 0 0 8px var(--neon-color), 0 0 15px var(--neon-color);
 }
 
 .project:hover {
-    transform: translateY(-8px);
-    background: #2a2a43; /* Slightly lighter purple-gray on hover */
-    box-shadow: 0 4px 20px rgba(155, 89, 182, 0.7); /* Neon glow around project */
+    transform: scale(var(--hover-scale)) rotate(2deg);
+    background: linear-gradient(145deg, #2a2a3f, #3a3a50);
+    box-shadow: 0 10px 25px rgba(155, 89, 182, 0.9), 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 /* Social Links */
 .social-links a {
     text-decoration: none;
     color: #fff;
-    background: #6a5acd; /* Medium purple for buttons */
+    background: #6a5acd;
     padding: 0.75rem 1.25rem;
     border-radius: 8px;
-    transition: background 0.3s, box-shadow 0.3s;
+    transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
 }
 
 .social-links a:hover {
-    background: #9b59b6; /* Lighter purple for hover effect */
-    box-shadow: 0 0 15px #9b59b6; /* Neon glow effect */
+    background: var(--neon-color);
+    box-shadow: 0 0 20px var(--neon-color), 0 0 40px var(--neon-color);
+    transform: scale(1.2);
 }
 
 /* Contact details */
@@ -149,48 +197,59 @@ footer {
     background: #292c36;
     color: #fff;
     font-size: 0.9rem;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 footer:hover {
-    background-color: #2a2a43;
+    background: linear-gradient(145deg, #2a2a43, #3a3a55);
+    animation: neonGlowEnhanced 3s infinite alternate;
 }
 
 /* Animations */
 @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes smoothFade {
     from {
         opacity: 0;
+        transform: scale(0.8);
     }
     to {
         opacity: 1;
+        transform: scale(1);
     }
 }
 
-@keyframes bounce {
-    from {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateY(-10px);
-    }
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
 }
 
-/* Animación para el efecto de neón */
-@keyframes neonGlow {
+@keyframes rotateScale {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(5deg) scale(1.05); }
+    100% { transform: rotate(0deg) scale(1); }
+}
+
+@keyframes neonGlowEnhanced {
     0% {
-        text-shadow: 0 0 2px #6a1b9a, 0 0 5px #6a1b9a, 0 0 10px #6a1b9a;
+        text-shadow: 0 0 5px var(--neon-color), 0 0 10px var(--neon-color), 0 0 15px var(--neon-color), 0 0 20px var(--neon-color);
     }
     50% {
-        text-shadow: 0 0 5px #6a1b9a, 0 0 10px #6a1b9a, 0 0 20px #6a1b9a;
+        text-shadow: 0 0 10px var(--neon-color), 0 0 20px var(--neon-color), 0 0 30px var(--neon-color), 0 0 40px var(--neon-color);
     }
     100% {
-        text-shadow: 0 0 2px #6a1b9a, 0 0 5px #6a1b9a, 0 0 10px #6a1b9a;
+        text-shadow: 0 0 5px var(--neon-color), 0 0 10px var(--neon-color), 0 0 15px var(--neon-color), 0 0 20px var(--neon-color);
     }
 }
 
 /* Emoji size */
-h1 span, h2 span {
-    font-size: 1.8em; /* Slightly larger for emphasis */
+h1 span,
+h2 span {
+    font-size: 1.8em;
 }
 
 /* Profile section */
@@ -208,9 +267,10 @@ h1 span, h2 span {
     height: 200px;
     border-radius: 50%;
     margin-bottom: 1rem;
+    animation: float 3s ease-in-out infinite, smoothFade 2s;
 }
 
-/* Skills Section Styling */
+/* Skills Section */
 #skills {
     text-align: center;
     padding: 3rem 1.5rem;
@@ -218,7 +278,7 @@ h1 span, h2 span {
 
 #skills h2 {
     font-size: 2.5rem;
-    color: #9b59b6;
+    color: var(--neon-color);
     margin-bottom: 1.5rem;
 }
 
@@ -226,6 +286,7 @@ h1 span, h2 span {
     font-size: 1.8rem;
     color: #a6a6d6;
     margin-bottom: 1rem;
+    animation: smoothFade 1.5s ease-in-out;
 }
 
 .skills-list p {
@@ -233,20 +294,55 @@ h1 span, h2 span {
     color: #e0e0e0;
     display: inline-block;
     margin: 0.5rem 0;
+    animation: float 4s infinite;
 }
 
-.skills-list p span {
-    font-weight: bold;
-    margin: 0 0.5rem;
+/* Introduction text */
+#introduction {
+    color: #b57ed9;
+    text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff;
+    animation: textAnimation 2s ease-in-out infinite;
 }
 
-.skills-list p {
-    text-align: center;
-    font-size: 1.3rem;
+@keyframes textAnimation {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
 }
 
-.skills-list p::after {
-    content: "";
-    display: block;
-    margin-top: 1rem;
+/* Responsivo - Ajuste para móviles */
+@media (max-width: 768px) {
+    body {
+        font-size: 0.9rem;
+        padding: 0 1rem;
+    }
+
+    .navbar ul {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 1rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
 }
