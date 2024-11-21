@@ -10,21 +10,49 @@
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Barra de navegación -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#about-section">About Me</a></li>
+      <li><a href="#skills-section">Skills</a></li>
+      <li><a href="#projects-section">Featured Projects</a></li>
+      <li><a href="#contact-section">Contact</a></li>
+    </ul>
+  </nav>
   <header>
-    <h1>👋 Hi, I'm Pau Mena Torres 👋</h1>
+    <h1><span>👋</span> Hi, I'm Pau Mena Torres <span>👋</span></h1>
     <p>Junior Game Developer passionate about creating immersive games!</p>
   </header>
-
   <main>
-    <section id="about">
+    <section id="about-section" class="section about">
       <h2>About Me</h2>
-      <p>
-        I'm a Junior Game Developer with experience in C++ , Unity, Maya, ZBrush and more. Passionate about creating immersive games, with strong skills in 3D modeling, game mechanics, and problem-solving. Eager to contribute to creative projects and continue growing in the game development industry.
-      </p>
+      <div class="profile">
+        <img src="https://github.com/PauMenaTorres/Porfolio/blob/main/profile.png?raw=true" alt="Pau Mena Torres" class="profile-img">
+        <p>
+          I'm a Junior Game Developer with experience in C++ , Unity, Maya, ZBrush and more. Passionate about creating immersive games, with strong skills in 3D modeling, game mechanics, and problem-solving. Eager to contribute to creative projects and continue growing in the game development industry.
+        </p>
+      </div>
     </section>
 
-    <section id="projects">
-      <h2>🎮 Featured Projects 🎮</h2>
+    <!-- Skills Section -->
+    <section id="skills-section" class="section skills">
+      <h2><span>💻</span> Skills <span>💻</span></h2>
+  
+      <div class="skills-list">
+        <h3>Programming Languages:</h3>
+        <p>C | C++ | Python | C#</p>
+  
+        <h3>3D Modeling Software:</h3>
+        <p>Maya | ZBrush | Substance</p>
+  
+        <h3>Game Development Engines:</h3>
+        <p>Unity</p>
+      </div>
+    </section>
+  
+    <!-- Projects Section -->
+    <section id="projects-section" class="section projects">
+      <h2><span>🎮</span> Featured Projects <span>🎮</span></h2>
       <div class="projects-grid">
         <div class="project">
           <h3>Furious Bald</h3>
@@ -59,13 +87,18 @@
       </div>
     </section>
 
-    <section id="contact">
-      <h2>🤝 Connect with Me 🤝</h2>
+    <section id="contact-section" class="section contact">
+      <h2><span>🤝</span> Connect with Me <span>🤝</span></h2>
+      <div class="contact-details">
+        <p>📞 Phone: +34 619886534</p>
+        <p>✉️ Email: paumt128@gmail.com </p>
+      </div>
       <div class="social-links">
         <a href="https://www.linkedin.com/in/pau-mena-torres-a884232a0" target="_blank">LinkedIn</a>
         <a href="https://www.instagram.com/paumt128" target="_blank">Instagram</a>
         <a href="https://twitter.com/Mena__04" target="_blank">Twitter</a>
         <a href="https://www.artstation.com/paumt128" target="_blank">ArtStation</a>
+        <a href="mailto:paumt128@gmail.com" target="_blank">Email Me</a>
       </div>
     </section>
   </main>

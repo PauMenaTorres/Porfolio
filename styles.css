@@ -1,129 +1,252 @@
 /* Global Styles */
 body {
-    font-family: 'Press Start 2P', cursive, Arial, sans-serif; /* Estilo retro */
+    font-family: 'Press Start 2P', cursive;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    color: #fff;
-    background: linear-gradient(to bottom, #1a1a1a, #0d0d0d); /* Fondo oscuro con gradiente */
-  }
-  
-  /* Header */
-  header {
-    text-align: center;
-    padding: 3rem 2rem;
-    background: #222;
-    border-bottom: 4px solid #e63946; /* Línea decorativa */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-  }
-  
-  header h1 {
-    font-size: 3rem;
-    color: #e63946;
-    text-shadow: 0 2px 5px #000, 0 0 10px #e63946;
-    animation: pulse 2s infinite alternate; /* Efecto de pulsación */
-  }
-  
-  header p {
-    font-size: 1.5rem;
-    color: #fff;
-  }
-  
-  /* Main Content */
-  main {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: auto;
-  }
-  
-  section {
-    margin: 3rem 0;
-  }
-  
-  section h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 2rem;
-    color: #f4a261;
-    text-shadow: 0 2px 5px #000;
-  }
-  
-  .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-  }
-  
-  .project {
-    background: #222;
-    padding: 1.5rem;
-    border: 2px solid #f4a261;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  
-  .project:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 25px rgba(244, 162, 97, 0.7);
-  }
-  
-  .project h3 {
-    margin: 0 0 0.5rem;
-    color: #e63946;
-    text-shadow: 0 2px 5px #000;
-  }
-  
-  .project a {
-    text-decoration: none;
-    color: #06d6a0;
-    font-size: 1rem;
-  }
-  
-  .project a:hover {
-    text-shadow: 0 0 10px #06d6a0, 0 0 20px #06d6a0;
-  }
-  
-  /* Social Links */
-  .social-links {
+    color: #f4f4f9; /* Light gray text for readability */
+    background: #121212; /* Very dark gray for a sleek, modern background */
+}
+
+/* Barra de navegación */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #2a2a3f;
+    padding: 1rem;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.navbar ul {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
-  }
-  
-  .social-links a {
+    gap: 2rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
     text-decoration: none;
     color: #fff;
-    background: #457b9d;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    transition: background 0.3s, box-shadow 0.3s;
-  }
-  
-  .social-links a:hover {
-    background: #1d3557;
-    box-shadow: 0 0 10px #457b9d, 0 0 20px #1d3557;
-  }
-  
-  /* Footer */
-  footer {
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #9b59b6; /* Hover effect color */
+}
+
+/* Espaciado en las secciones para que no se sobrepongan con el navbar */
+section {
+    margin: 3rem 0;
+    padding-top: 3.5rem; /* Ajuste para compensar la barra de navegación fija */
+}
+
+header {
     text-align: center;
-    padding: 1.5rem;
-    background: #111;
+    padding: 2.5rem;
+    background: #2a2a3f; /* Dark, muted purple-gray */
     color: #fff;
-    border-top: 4px solid #e63946;
-  }
-  
-  /* Animations */
-  @keyframes pulse {
+    animation: fade-in 1.5s ease-in-out;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    color: #9b59b6; /* Softer lavender purple */
+    position: relative;
+    animation: neonGlow 1.5s ease-in-out infinite alternate; /* Animación de neón */
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #b0b0b0; /* Light gray for a subtle contrast */
+}
+
+main {
+    padding: 1.5rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #a6a6d6; /* Light, soft lavender for section titles */
+    font-size: 2.2rem;
+    animation: bounce 1.5s infinite alternate;
+}
+
+/* Project Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.project {
+    background: #1f1f2e; /* Darker base for project cards */
+    padding: 1.5rem;
+    border: 1px solid #5a5a7f; /* Muted purple-gray border */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.project a {
+    text-decoration: none;
+    color: #8e44ad; /* Rich purple for links */
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s;
+}
+
+.project a:hover {
+    color: #9b59b6; /* Lighter lavender on hover */
+    text-shadow: 0 0 8px #9b59b6, 0 0 15px #9b59b6; /* Neon glow effect */
+}
+
+.project:hover {
+    transform: translateY(-8px);
+    background: #2a2a43; /* Slightly lighter purple-gray on hover */
+    box-shadow: 0 4px 20px rgba(155, 89, 182, 0.7); /* Neon glow around project */
+}
+
+/* Social Links */
+.social-links a {
+    text-decoration: none;
+    color: #fff;
+    background: #6a5acd; /* Medium purple for buttons */
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.social-links a:hover {
+    background: #9b59b6; /* Lighter purple for hover effect */
+    box-shadow: 0 0 15px #9b59b6; /* Neon glow effect */
+}
+
+/* Contact details */
+.contact-details p {
+    font-size: 1.2rem;
+    color: #b0b0b0;
+}
+
+.contact-details p:hover {
+    color: #b0b0b0;
+}
+
+/* Footer neon effect */
+footer {
+    text-align: center;
+    padding: 1.25rem;
+    background: #292c36;
+    color: #fff;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+footer:hover {
+    background-color: #2a2a43;
+}
+
+/* Animations */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+/* Animación para el efecto de neón */
+@keyframes neonGlow {
     0% {
-      transform: scale(1);
-      text-shadow: 0 2px 5px #000, 0 0 15px #e63946;
+        text-shadow: 0 0 2px #6a1b9a, 0 0 5px #6a1b9a, 0 0 10px #6a1b9a;
+    }
+    50% {
+        text-shadow: 0 0 5px #6a1b9a, 0 0 10px #6a1b9a, 0 0 20px #6a1b9a;
     }
     100% {
-      transform: scale(1.1);
-      text-shadow: 0 4px 10px #000, 0 0 25px #e63946;
+        text-shadow: 0 0 2px #6a1b9a, 0 0 5px #6a1b9a, 0 0 10px #6a1b9a;
     }
-  }
-  
+}
+
+/* Emoji size */
+h1 span, h2 span {
+    font-size: 1.8em; /* Slightly larger for emphasis */
+}
+
+/* Profile section */
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+/* Skills Section Styling */
+#skills {
+    text-align: center;
+    padding: 3rem 1.5rem;
+}
+
+#skills h2 {
+    font-size: 2.5rem;
+    color: #9b59b6;
+    margin-bottom: 1.5rem;
+}
+
+.skills-list h3 {
+    font-size: 1.8rem;
+    color: #a6a6d6;
+    margin-bottom: 1rem;
+}
+
+.skills-list p {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    display: inline-block;
+    margin: 0.5rem 0;
+}
+
+.skills-list p span {
+    font-weight: bold;
+    margin: 0 0.5rem;
+}
+
+.skills-list p {
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.skills-list p::after {
+    content: "";
+    display: block;
+    margin-top: 1rem;
+}
