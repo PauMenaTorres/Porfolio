@@ -16,6 +16,9 @@ body {
 
 /* Barra de navegación */
 .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     position: fixed;
     top: 0;
     left: 0;
@@ -48,6 +51,73 @@ body {
     transform: scale(1.1);
     animation: rotateScale 0.5s ease-in-out;
 }
+/* Responsivo */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+/* Estilo para el botón hamburguesa */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* Ocultar el menú por defecto en dispositivos pequeños */
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links.active {
+    display: flex;
+    flex-direction: column;
+    background-color: #2a2a3f;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    animation: smoothFade 0.3s ease-in-out;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
 
 /* Espaciado en las secciones */
 section {
@@ -64,7 +134,7 @@ header {
 }
 
 header h1 {
-    font-size: 3rem; /* Puedes ajustar el tamaño */
+    font-size: 3rem;
     color: #2e0339;
     position: relative;
     font-weight: bold;
@@ -79,7 +149,7 @@ header h1 {
     }
     50% {
         text-shadow: 0 0 15px #9b50b9, 0 0 25px #9b50b9, 0 0 30px #7d338f, 0 0 35px #5e0d77;
-        transform: scale(1.2) rotate(3deg); /* Leve ligera rotación */
+        transform: scale(1.2) rotate(3deg);
     }
     100% {
         text-shadow: 0 0 5px #5e0d77, 0 0 10px #7d338f, 0 0 15px #9b50b9, 0 0 20px #9b50b9;
@@ -104,7 +174,6 @@ header h1 {
         transform: translateX(0);
     }
 }
-
 
 header p {
     font-size: 1.2rem;
@@ -165,6 +234,14 @@ section h2 {
 }
 
 /* Social Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
 .social-links a {
     text-decoration: none;
     color: #fff;
@@ -172,6 +249,7 @@ section h2 {
     padding: 0.75rem 1.25rem;
     border-radius: 8px;
     transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
+    text-align: center;
 }
 
 .social-links a:hover {
@@ -234,18 +312,6 @@ footer:hover {
     100% { transform: rotate(0deg) scale(1); }
 }
 
-@keyframes neonGlowEnhanced {
-    0% {
-        text-shadow: 0 0 5px var(--neon-color), 0 0 10px var(--neon-color), 0 0 15px var(--neon-color), 0 0 20px var(--neon-color);
-    }
-    50% {
-        text-shadow: 0 0 10px var(--neon-color), 0 0 20px var(--neon-color), 0 0 30px var(--neon-color), 0 0 40px var(--neon-color);
-    }
-    100% {
-        text-shadow: 0 0 5px var(--neon-color), 0 0 10px var(--neon-color), 0 0 15px var(--neon-color), 0 0 20px var(--neon-color);
-    }
-}
-
 /* Emoji size */
 h1 span,
 h2 span {
@@ -294,55 +360,31 @@ h2 span {
     color: #e0e0e0;
     display: inline-block;
     margin: 0.5rem 0;
-    animation: float 4s infinite;
 }
 
-/* Introduction text */
-#introduction {
-    color: #b57ed9;
-    text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff;
-    animation: textAnimation 2s ease-in-out infinite;
-}
 
-@keyframes textAnimation {
-    0% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.1); opacity: 0.8; }
-    100% { transform: scale(1); opacity: 1; }
-}
-
-/* Responsivo - Ajuste para móviles */
+/* Responsive Styles */
 @media (max-width: 768px) {
-    body {
-        font-size: 0.9rem;
-        padding: 0 1rem;
-    }
-
-    .navbar ul {
-        flex-direction: row;
-        flex-wrap: nowrap;
+    .social-links {
+        flex-direction: column;
+        align-items: center;
         gap: 1rem;
     }
 
-    header h1 {
-        font-size: 2rem;
-    }
-
-    header p {
-        font-size: 1rem;
-    }
-
-    section h2 {
-        font-size: 1.8rem;
-        margin-bottom: 1rem;
+    .social-links a {
+        width: 100%;
+        max-width: 300px;
     }
 
     .projects-grid {
         grid-template-columns: 1fr;
-        gap: 1rem;
     }
 
-    .profile-img {
-        width: 150px;
-        height: 150px;
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
     }
 }
