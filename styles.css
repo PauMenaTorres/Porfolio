@@ -198,7 +198,8 @@ section h2 {
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
+    gap: 4.0rem; /* Aumentado el espacio entre filas y columnas */
+    align-items: stretch;
 }
 
 .project {
@@ -211,7 +212,14 @@ section h2 {
     transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
     animation: smoothFade 2s ease-in-out;
     will-change: transform;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
+
+
 
 .project a {
     text-decoration: none;
