@@ -17,8 +17,8 @@ body {
 /* Barra de navegación */
 .navbar {
     display: flex;
+    justify-content: space-between; /* Cambiado a space-between para mejor layout en móvil */
     align-items: center;
-    justify-content: space-between;
     position: fixed;
     top: 0;
     left: 0;
@@ -33,10 +33,13 @@ body {
 .navbar ul {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 2rem;
     list-style-type: none;
     margin: 0;
     padding: 0;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
 }
 
 .navbar a {
@@ -51,22 +54,7 @@ body {
     transform: scale(1.1);
     animation: rotateScale 0.5s ease-in-out;
 }
-/* Responsivo */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
 
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-}
 /* Estilo para el botón hamburguesa */
 .menu-toggle {
     display: none;
@@ -76,58 +64,65 @@ body {
     border: none;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
+    z-index: 1001;
 }
 
 .menu-toggle:hover {
     transform: scale(1.1);
 }
 
-/* Ocultar el menú por defecto en dispositivos pequeños */
-.nav-links {
-    display: flex;
-    gap: 2rem;
-    transition: all 0.3s ease-in-out;
-}
-
-.nav-links.active {
-    display: flex;
-    flex-direction: column;
-    background-color: #2a2a3f;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    padding: 1rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    animation: smoothFade 0.3s ease-in-out;
-}
-
-/* Responsivo */
+/* Estilos responsivos mejorados */
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
     }
 
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
+    .navbar {
+        flex-wrap: wrap;
     }
 
-    .nav-links.active {
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #2a2a3f;
+        padding: 1rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        text-align: center;
+    }
+
+    .navbar ul.active {
         display: flex;
+        animation: smoothFade 0.3s ease-in-out;
+    }
+
+    .navbar ul li {
+        margin: 0.75rem 0;
+    }
+    
+    /* Ajustar altura de secciones para compensar el menú fijo */
+    section {
+        padding-top: 5rem;
+    }
+    
+    header {
+        padding-top: 6rem;
     }
 }
 
 /* Espaciado en las secciones */
 section {
     margin: 3rem 0;
-    padding-top: 3.5rem;
+    padding-top: 5rem; /* Aumentado para evitar que el contenido quede bajo el navbar */
+    scroll-margin-top: 5rem; /* Para que la navegación por anclas funcione bien */
 }
 
 header {
     text-align: center;
-    padding: 2.5rem;
+    padding: 6rem 2.5rem 2.5rem; /* Aumentado padding-top para compensar navbar */
     background: #2a2a3f;
     color: #fff;
     animation: fade-in 1.5s ease-in-out, smoothFade 2s ease-in-out;
@@ -218,8 +213,6 @@ section h2 {
     justify-content: space-between;
     height: 100%;
 }
-
-
 
 .project a {
     text-decoration: none;
@@ -370,7 +363,6 @@ h2 span {
     margin: 0.5rem 0;
 }
 
-
 /* Responsive Styles */
 @media (max-width: 768px) {
     .social-links {
@@ -389,10 +381,43 @@ h2 span {
     }
 
     header h1 {
-        font-size: 2.5rem;
+        font-size: 1.8rem; /* Reducido para móviles */
     }
 
     section h2 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+    }
+    
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    /* Asegurar que los proyectos sean clickables en móvil */
+    .project:hover {
+        transform: scale(1.05) rotate(1deg); /* Reducción de efecto en móvil */
+    }
+}
+
+/* Para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.4rem;
+    }
+    
+    header p {
+        font-size: 1rem;
+    }
+    
+    .project {
+        padding: 1rem;
+    }
+    
+    .skills-list h3 {
+        font-size: 1.4rem;
+    }
+    
+    .skills-list p {
+        font-size: 1rem;
     }
 }
