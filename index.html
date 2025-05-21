@@ -16,7 +16,7 @@
     <ul id="navbar-menu">
       <li><a href="#about-section">About Me</a></li>
       <li><a href="#skills-section">Skills</a></li>
-      <li><a href="#projects-section">Featured Projects</a></li>
+      <li><a href="#projects-section">Projects</a></li>
       <li><a href="#contact-section">Contact</a></li>
     </ul>
   </nav>
@@ -52,57 +52,697 @@
       </div>
     </section>
   
-    <!-- Projects Section -->
-    <section id="projects-section" class="section projects">
-      <h2><span>🎮</span> Projects <span>🎮</span></h2>
-      <div class="projects-grid">
-        <div class="project">
-          <h3>W40K: The Last Marine</h3>
-          <p>HUD and UI gamelpay programmer for a Warhammer 40K diablo like on a 40 persons team</p>
-          <a href="https://github.com/Burned-Games/W40K-TLM/tree/Beta" target="_blank">View on GitHub</a>
+<!-- Projects Section -->
+<section id="projects-section" class="section projects">
+  <h2><span>🎮</span> Projects <span>🎮</span></h2>
+  
+  <!-- Project List Grid (Thumbnails) -->
+  <div class="projects-list">
+    <div class="project-card" data-project="warhammer" style="background-image: url('./images/projects/warhammer/thumbnail.png');">
+      <div class="project-title-container">
+        <h3>W40K: The Last Marine</h3>
+      </div>
+    </div>
+    
+    <div class="project-card" data-project="coffee-engine" style="background-image: url('./images/projects/coffee-engine/thumbnail.jpg');">
+      <div class="project-title-container">
+        <h3>Coffee Engine: UI_Module</h3>
+      </div>
+    </div>
+    
+    <div class="project-card" data-project="oh-my-ghost" style="background-image: url('./images/projects/oh-my-ghost/thumbnail.jpg');">
+      <div class="project-title-container">
+        <h3>Oh My Ghost</h3>
+      </div>
+    </div>
+    
+    <div class="project-card" data-project="furious-bald" style="background-image: url('./images/projects/furious-bald/thumbnail.jpg');">
+      <div class="project-title-container">
+        <h3>Furious Bald</h3>
+      </div>
+    </div>
+    
+    <div class="project-card" data-project="arkanoid" style="background-image: url('./images/projects/arkanoid/thumbnail.jpg');">
+      <div class="project-title-container">
+        <h3>Arkanoid</h3>
+      </div>
+    </div>
+    
+    <div class="project-card" data-project="bomberman" style="background-image: url('./images/projects/bomberman/thumbnail.jpg');">
+      <div class="project-title-container">
+        <h3>Bomberman: Panic Bomber</h3>
+      </div>
+    </div>
+    
+    <div class="project-card" data-project="rockstallica" style="background-image: url('./images/projects/rockstallica/thumbnail.jpg');">
+      <div class="project-title-container">
+        <h3>Rockstallica Engine</h3>
+      </div>
+    </div>
+    
+    <div class="project-card" data-project="pinball" style="background-image: url('./images/projects/pinball/thumbnail.jpg');">
+      <div class="project-title-container">
+        <h3>Pinball 2D</h3>
+      </div>
+    </div>
+    
+    <div class="project-card" data-project="escaperoom" style="background-image: url('./images/projects/escaperoom/thumbnail.jpg');">
+      <div class="project-title-container">
+        <h3>EscapeRoom VR</h3>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Individual Project Details Sections (Hidden by Default) -->
+  <div class="project-details-container">
+    <!-- Warhammer 40K Project -->
+    <div id="warhammer" class="project-details">
+      <button class="close-project">✖</button>
+      <h2>W40K: The Last Marine</h2>
+      
+      <div class="project-content">
+        <div class="project-media">
+          <div class="media-tabs">
+            <button class="media-tab active" data-target="warhammer-screenshots">Screenshots</button>
+            <button class="media-tab" data-target="warhammer-videos">Videos</button>
+          </div>
+          
+          <div id="warhammer-screenshots" class="media-content active">
+            <div class="screenshot-gallery">
+              <img src="./images/projects/warhammer/screenshot1.jpg" alt="Warhammer Screenshot 1">
+              <img src="./images/projects/warhammer/screenshot2.jpg" alt="Warhammer Screenshot 2">
+              <img src="./images/projects/warhammer/screenshot3.jpg" alt="Warhammer Screenshot 3">
+            </div>
+          </div>
+          
+          <div id="warhammer-videos" class="media-content">
+            <div class="video-container">
+              <video controls>
+                <source src="#" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
         </div>
-        <div class="project">
-          <h3>Coffee Engine: UI_Module</h3>
-          <p>In charge of UI Module of an high level game engine for 3D projects</p>
-          <a href="https://github.com/Burned-Games/Coffee-Engine/tree/Alpha1" target="_blank">View on GitHub</a>
-        </div>
-        <div class="project">
-          <h3>Oh My Ghost</h3>
-          <p>A fun and engaging game featuring ghostly gameplay.</p>
-          <a href="https://github.com/DumBell-Games/Oh-my-ghost" target="_blank">View on GitHub</a>
-        </div>
-        <div class="project">
-          <h3>Furious Bald</h3>
-          <p>A 2D platformer game developed using SDL2.</p>
-          <a href="https://github.com/ClaseAltaGames/DDV_Platformer_SDL_Game" target="_blank">View on GitHub</a>
-        </div>
-        <div class="project">
-          <h3>Arkanoid</h3>
-          <p>A Unity mobile adaptation of the classic Arkanoid game.</p>
-          <a href="https://github.com/CITM-MOBILE-DEVICES-TERRASSA/Arkanoid_PauMenaTorres" target="_blank">View on GitHub</a>
-        </div>
-        <div class="project">
-          <h3>Bomberman: Panic Bomber</h3>
-          <p>An adaptation of NeoGeo Bomberman: Panic Bomber made in C++.</p>
-          <a href="https://github.com/GoForce-Games/Projecte-1" target="_blank">View on GitHub</a>
-        </div>
-        <div class="project">
-          <h3>Rockstallica Engine</h3>
-          <p>A game engine developed for creating 3D projects</p>
-          <a href="https://github.com/ClaseAltaGames/RockstallicaEngine" target="_blank">View on GitHub</a>
-        </div>
-        <div class="project">
-          <h3>Pinball 2D</h3>
-          <p>A physics-based pinball game developed in C++.</p>
-          <a href="https://github.com/GoForce-Games/Fisica---Pinball" target="_blank">View on GitHub</a>
-        </div>
-        <div class="project">
-          <h3>EscapeRoom VR: The Rituals of Bill “El Tuerto”</h3>
-          <p>An immersive virtual reality escape room thriller. </p>
-          <a href="https://github.com/GoForce-Games/EscapeRoomVR" target="_blank">View on GitHub</a>
+        
+        <div class="project-info">
+          <div class="info-section">
+            <h3>Description</h3>
+            <p>HUD and UI gameplay programmer for a Warhammer 40K diablo-like game developed with a team of 40 people. Responsible for creating an immersive user interface that aligned with the dark, futuristic aesthetic of the Warhammer 40K universe.</p>
+          </div>
+          
+          <div class="info-section">
+            <h3>My Role</h3>
+            <ul>
+              <li>Designed and implemented the game's heads-up display</li>
+              <li>Created responsive UI elements for different screen resolutions</li>
+              <li>Programmed inventory management systems</li>
+              <li>Implemented health, ammo, and ability indicators</li>
+              <li>Collaborated with artists to integrate UI assets</li>
+              <li>Optimized UI performance for smooth gameplay</li>
+            </ul>
+          </div>
+          
+          <div class="info-section">
+            <h3>Technologies Used</h3>
+            <p>Coffee Engine, Lua, C++</p>
+          </div>
+          
+          <div class="info-section">
+            <h3>Links</h3>
+            <a href="https://github.com/Burned-Games/W40K-TLM/tree/Beta" target="_blank" class="project-link">GitHub Repository</a>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+    
+    <!-- Coffee Engine Project -->
+    <div id="coffee-engine" class="project-details">
+      <button class="close-project">✖</button>
+      <h2>Coffee Engine: UI_Module</h2>
+      
+      <div class="project-content">
+        <div class="project-media">
+          <div class="media-tabs">
+            <button class="media-tab active" data-target="coffee-screenshots">Screenshots</button>
+            <button class="media-tab" data-target="coffee-videos">Videos</button>
+          </div>
+          
+          <div id="coffee-screenshots" class="media-content active">
+            <div class="screenshot-gallery">
+              <img src="./images/projects/coffee-engine/screenshot1.jpg" alt="Coffee Engine Screenshot 1">
+              <img src="./images/projects/coffee-engine/screenshot2.jpg" alt="Coffee Engine Screenshot 2">
+            </div>
+          </div>
+          
+          <div id="coffee-videos" class="media-content">
+            <div class="video-container">
+              <video controls>
+                <source src="#" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-info">
+          <div class="info-section">
+            <h3>Description</h3>
+            <p>Led the development of the UI Module for Coffee Engine, a high-level game engine designed for 3D projects. Created a flexible and intuitive user interface system that allowed game developers to easily implement in-game menus, HUDs, and other UI elements.</p>
+          </div>
+          
+          <div class="info-section">
+            <h3>My Role</h3>
+            <ul>
+              <li>Designed the architecture for the UI module</li>
+              <li>Implemented widget system for reusable UI components</li>
+              <li>Created layout management tools for responsive interfaces</li>
+              <li>Developed event handling for UI interactions</li>
+              <li>Built a drag-and-drop editor for UI creation</li>
+              <li>Documented the API for team members</li>
+            </ul>
+          </div>
+          
+          <div class="info-section">
+            <h3>Technologies Used</h3>
+            <p>C++, OpenGL, ImGui, JSON</p>
+          </div>
+          
+          <div class="info-section">
+            <h3>Links</h3>
+            <a href="https://github.com/Burned-Games/Coffee-Engine/tree/Alpha1" target="_blank" class="project-link">GitHub Repository</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Oh My Ghost Project -->
+    <div id="oh-my-ghost" class="project-details">
+      <button class="close-project">✖</button>
+      <h2>Oh My Ghost</h2>
+      
+      <div class="project-content">
+        <div class="project-media">
+          <div class="media-tabs">
+            <button class="media-tab active" data-target="ghost-screenshots">Screenshots</button>
+            <button class="media-tab" data-target="ghost-videos">Videos</button>
+          </div>
+          
+          <div id="ghost-screenshots" class="media-content active">
+            <div class="screenshot-gallery">
+              <img src="./images/projects/oh-my-ghost/screenshot1.jpg" alt="Oh My Ghost Screenshot 1">
+              <img src="./images/projects/oh-my-ghost/screenshot2.jpg" alt="Oh My Ghost Screenshot 2">
+            </div>
+          </div>
+          
+          <div id="ghost-videos" class="media-content">
+            <div class="video-container">
+              <video controls>
+                <source src="#" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-info">
+          <div class="info-section">
+            <h3>Description</h3>
+            <p>A fun and engaging game featuring ghostly gameplay where players take on the role of a mischievous ghost haunting a mansion. The objective is to scare all human inhabitants while avoiding ghost hunters and managing your supernatural energy.</p>
+          </div>
+          
+          <div class="info-section">
+            <h3>My Role</h3>
+            <ul>
+              <li>AI programming for NPC behavior and pathfinding</li>
+              <li>Physics-based interaction system for ghostly abilities</li>
+              <li>Level design and implementation</li>
+              <li>Particle effects for supernatural elements</li>
+              <li>Sound implementation for ghostly atmosphere</li>
+              <li>Game mechanics balancing</li>
+            </ul>
+          </div>
+          
+          <div class="info-section">
+            <h3>Technologies Used</h3>
+            <p>C++, SDL2, Box2D, Tiled</p>
+          </div>
+          
+          <div class="info-section">
+            <h3>Links</h3>
+            <a href="https://github.com/DumBell-Games/Oh-my-ghost" target="_blank" class="project-link">GitHub Repository</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Furious Bald Project -->
+    <div id="furious-bald" class="project-details">
+      <button class="close-project">✖</button>
+      <h2>Furious Bald</h2>
+      
+      <div class="project-content">
+        <div class="project-media">
+          <div class="media-tabs">
+            <button class="media-tab active" data-target="bald-screenshots">Screenshots</button>
+            <button class="media-tab" data-target="bald-videos">Videos</button>
+          </div>
+          
+          <div id="bald-screenshots" class="media-content active">
+            <div class="screenshot-gallery">
+              <img src="https://github.com/user-attachments/assets/placeholder-screenshot1.jpg" alt="Furious Bald Screenshot 1">
+              <img src="https://github.com/user-attachments/assets/placeholder-screenshot2.jpg" alt="Furious Bald Screenshot 2">
+            </div>
+          </div>
+          
+          <div id="bald-videos" class="media-content">
+            <div class="video-container">
+              <video controls>
+                <source src="#" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-info">
+          <div class="info-section">
+            <h3>Description</h3>
+            <p>A 2D platformer game developed using SDL2 featuring a bald protagonist with a fiery temper navigating through challenging levels. The game combines fast-paced action with precision platforming and unique power-ups.</p>
+          </div>
+          
+          <div class="info-section">
+            <h3>My Role</h3>
+            <ul>
+              <li>Character controller implementation</li>
+              <li>Collision detection and physics</li>
+              <li>Enemy AI behavior patterns</li>
+              <li>Power-up system development</li>
+              <li>Level design for progressively challenging stages</li>
+              <li>Animation state machine programming</li>
+            </ul>
+          </div>
+          
+          <div class="info-section">
+            <h3>Technologies Used</h3>
+            <p>C++, SDL2, Box2D, XML</p>
+          </div>
+          
+          <div class="info-section">
+            <h3>Links</h3>
+            <a href="https://github.com/ClaseAltaGames/DDV_Platformer_SDL_Game" target="_blank" class="project-link">GitHub Repository</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Arkanoid Project -->
+    <div id="arkanoid" class="project-details">
+      <button class="close-project">✖</button>
+      <h2>Arkanoid</h2>
+      
+      <div class="project-content">
+        <div class="project-media">
+          <div class="media-tabs">
+            <button class="media-tab active" data-target="arkanoid-screenshots">Screenshots</button>
+            <button class="media-tab" data-target="arkanoid-videos">Videos</button>
+          </div>
+          
+          <div id="arkanoid-screenshots" class="media-content active">
+            <div class="screenshot-gallery">
+              <img src="https://github.com/user-attachments/assets/placeholder-screenshot1.jpg" alt="Arkanoid Screenshot 1">
+              <img src="https://github.com/user-attachments/assets/placeholder-screenshot2.jpg" alt="Arkanoid Screenshot 2">
+            </div>
+          </div>
+          
+          <div id="arkanoid-videos" class="media-content">
+            <div class="video-container">
+              <video controls>
+                <source src="#" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-info">
+          <div class="info-section">
+            <h3>Description</h3>
+            <p>A Unity mobile adaptation of the classic Arkanoid game, combining retro gameplay with modern mobile features. Players control a paddle to bounce a ball and break blocks while collecting power-ups and advancing through increasingly difficult levels.</p>
+          </div>
+          
+          <div class="info-section">
+            <h3>My Role</h3>
+            <ul>
+              <li>Mobile touch controls implementation</li>
+              <li>Physics system for realistic ball bouncing</li>
+              <li>Power-up system with various effects</li>
+              <li>Level progression and difficulty scaling</li>
+              <li>Visual effects for block destruction</li>
+              <li>Mobile optimization for smooth performance</li>
+            </ul>
+          </div>
+          
+          <div class="info-section">
+            <h3>Technologies Used</h3>
+            <p>Unity, C#, Mobile Input System</p>
+          </div>
+          
+          <div class="info-section">
+            <h3>Links</h3>
+            <a href="https://github.com/CITM-MOBILE-DEVICES-TERRASSA/Arkanoid_PauMenaTorres" target="_blank" class="project-link">GitHub Repository</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Bomberman Project -->
+    <div id="bomberman" class="project-details">
+      <button class="close-project">✖</button>
+      <h2>Bomberman: Panic Bomber</h2>
+      
+      <div class="project-content">
+        <div class="project-media">
+          <div class="media-tabs">
+            <button class="media-tab active" data-target="bomberman-screenshots">Screenshots</button>
+            <button class="media-tab" data-target="bomberman-videos">Videos</button>
+          </div>
+          
+          <div id="bomberman-screenshots" class="media-content active">
+            <div class="screenshot-gallery">
+              <img src="https://github.com/user-attachments/assets/placeholder-screenshot1.jpg" alt="Bomberman Screenshot 1">
+              <img src="https://github.com/user-attachments/assets/placeholder-screenshot2.jpg" alt="Bomberman Screenshot 2">
+            </div>
+          </div>
+          
+          <div id="bomberman-videos" class="media-content">
+            <div class="video-container">
+              <video controls>
+                <source src="#" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-info">
+          <div class="info-section">
+            <h3>Description</h3>
+            <p>An adaptation of the NeoGeo classic Bomberman: Panic Bomber made in C++. This puzzle-action game combines elements of falling-block puzzlers with the explosive gameplay of Bomberman, creating a fast-paced and competitive experience.</p>
+          </div>
+          
+          <div class="info-section">
+            <h3>My Role</h3>
+            <ul>
+              <li>Core gameplay mechanics implementation</li>
+              <li>Puzzle block generation and behavior</li>
+              <li>Explosion chain reaction system</li>
+              <li>AI opponent programming</li>
+              <li>Multiplayer mode implementation</li>
+              <li>Sound and visual effects integration</li>
+            </ul>
+          </div>
+          
+          <div class="info-section">
+            <h3>Technologies Used</h3>
+            <p>C++, SDL2, Custom Rendering Engine</p>
+          </div>
+          
+          <div class="info-section">
+            <h3>Links</h3>
+            <a href="https://github.com/GoForce-Games/Projecte-1" target="_blank" class="project-link">GitHub Repository</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Rockstallica Engine Project -->
+    <div id="rockstallica" class="project-details">
+      <button class="close-project">✖</button>
+      <h2>Rockstallica Engine</h2>
+      
+      <div class="project-content">
+        <div class="project-media">
+          <div class="media-tabs">
+            <button class="media-tab active" data-target="rockstallica-screenshots">Screenshots</button>
+            <button class="media-tab" data-target="rockstallica-videos">Videos</button>
+          </div>
+          
+          <div id="rockstallica-screenshots" class="media-content active">
+            <div class="screenshot-gallery">
+              <img src="https://github.com/user-attachments/assets/placeholder-screenshot1.jpg" alt="Rockstallica Engine Screenshot 1">
+              <img src="https://github.com/user-attachments/assets/placeholder-screenshot2.jpg" alt="Rockstallica Engine Screenshot 2">
+            </div>
+          </div>
+          
+          <div id="rockstallica-videos" class="media-content">
+            <div class="video-container">
+              <video controls>
+                <source src="#" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-info">
+          <div class="info-section">
+            <h3>Description</h3>
+            <p>A custom game engine developed for creating 3D projects, with a focus on performance and ease of use. Rockstallica Engine provides a comprehensive set of tools for game developers, including rendering, physics, audio, and scene management systems.</p>
+          </div>
+          
+          <div class="info-section">
+            <h3>My Role</h3>
+            <ul>
+              <li>Core engine architecture design</li>
+              <li>Renderer implementation with modern OpenGL</li>
+              <li>Scene graph and component system</li>
+              <li>Resource management system</li>
+              <li>Editor UI development</li>
+              <li>Performance optimization</li>
+            </ul>
+          </div>
+          
+          <div class="info-section">
+            <h3>Technologies Used</h3>
+            <p>C++, OpenGL, ImGui, Bullet Physics, OpenAL</p>
+          </div>
+          
+          <div class="info-section">
+            <h3>Links</h3>
+            <a href="https://github.com/ClaseAltaGames/RockstallicaEngine" target="_blank" class="project-link">GitHub Repository</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Pinball 2D Project -->
+    <div id="pinball" class="project-details">
+      <button class="close-project">✖</button>
+      <h2>Pinball 2D</h2>
+      
+      <div class="project-content">
+        <div class="project-media">
+          <div class="media-tabs">
+            <button class="media-tab active" data-target="pinball-screenshots">Screenshots</button>
+            <button class="media-tab" data-target="pinball-videos">Videos</button>
+          </div>
+          
+          <div id="pinball-screenshots" class="media-content active">
+            <div class="screenshot-gallery">
+              <img src="https://github.com/user-attachments/assets/placeholder-screenshot1.jpg" alt="Pinball 2D Screenshot 1">
+              <img src="https://github.com/user-attachments/assets/placeholder-screenshot2.jpg" alt="Pinball 2D Screenshot 2">
+            </div>
+          </div>
+          
+          <div id="pinball-videos" class="media-content">
+            <div class="video-container">
+              <video controls>
+                <source src="#" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-info">
+          <div class="info-section">
+            <h3>Description</h3>
+            <p>A physics-based pinball game developed in C++ that accurately simulates the mechanics of real-world pinball tables. Features realistic ball physics, interactive elements like bumpers and flippers, and a scoring system with multi-ball challenges.</p>
+          </div>
+          
+          <div class="info-section">
+            <h3>My Role</h3>
+            <ul>
+              <li>Physics simulation implementation</li>
+              <li>Flipper mechanics and controls</li>
+              <li>Collision detection and response</li>
+              <li>Table elements (bumpers, ramps, targets)</li>
+              <li>Scoring system and multipliers</li>
+              <li>Visual and audio feedback systems</li>
+            </ul>
+          </div>
+          
+          <div class="info-section">
+            <h3>Technologies Used</h3>
+            <p>C++, Box2D, SDL2, Custom Physics Engine</p>
+          </div>
+          
+          <div class="info-section">
+            <h3>Links</h3>
+            <a href="https://github.com/GoForce-Games/Fisica---Pinball" target="_blank" class="project-link">GitHub Repository</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- EscapeRoom VR Project -->
+    <div id="escaperoom" class="project-details">
+      <button class="close-project">✖</button>
+      <h2>EscapeRoom VR: The Rituals of Bill "El Tuerto"</h2>
+      
+      <div class="project-content">
+        <div class="project-media">
+          <div class="media-tabs">
+            <button class="media-tab active" data-target="escaperoom-screenshots">Screenshots</button>
+            <button class="media-tab" data-target="escaperoom-videos">Videos</button>
+          </div>
+          
+          <div id="escaperoom-screenshots" class="media-content active">
+            <div class="screenshot-gallery">
+              <img src="https://github.com/user-attachments/assets/placeholder-screenshot1.jpg" alt="EscapeRoom VR Screenshot 1">
+              <img src="https://github.com/user-attachments/assets/placeholder-screenshot2.jpg" alt="EscapeRoom VR Screenshot 2">
+            </div>
+          </div>
+          
+          <div id="escaperoom-videos" class="media-content">
+            <div class="video-container">
+              <video controls>
+                <source src="#" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-info">
+          <div class="info-section">
+            <h3>Description</h3>
+            <p>An immersive virtual reality escape room thriller where players must solve intricate puzzles to uncover the dark secrets of Bill "El Tuerto" and escape before time runs out. The game combines atmospheric horror elements with challenging puzzle mechanics in a fully interactive VR environment.</p>
+          </div>
+          
+          <div class="info-section">
+            <h3>My Role</h3>
+            <ul>
+              <li>VR interaction system development</li>
+              <li>Puzzle design and implementation</li>
+              <li>Environmental storytelling elements</li>
+              <li>Physics-based object manipulation</li>
+              <li>Atmospheric lighting and sound design</li>
+              <li>Performance optimization for VR</li>
+            </ul>
+          </div>
+          
+          <div class="info-section">
+            <h3>Technologies Used</h3>
+            <p>Unity, C#, SteamVR, Oculus SDK</p>
+          </div>
+          
+          <div class="info-section">
+            <h3>Links</h3>
+            <a href="https://github.com/GoForce-Games/EscapeRoomVR" target="_blank" class="project-link">GitHub Repository</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Add this script section at the end of your body tag -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Project Cards Click Event
+    const projectCards = document.querySelectorAll('.project-card');
+    const projectDetailsContainer = document.querySelector('.project-details-container');
+    const projectDetails = document.querySelectorAll('.project-details');
+    const closeButtons = document.querySelectorAll('.close-project');
+    
+    // Open project details
+    projectCards.forEach(card => {
+      card.addEventListener('click', function() {
+        const projectId = this.getAttribute('data-project');
+        const targetProject = document.getElementById(projectId);
+        
+        // Hide all project details first
+        projectDetails.forEach(project => {
+          project.classList.remove('active');
+        });
+        
+        // Show selected project details
+        targetProject.classList.add('active');
+        projectDetailsContainer.classList.add('active');
+        document.body.classList.add('project-open');
+      });
+    });
+    
+    // Close project details when clicking close button
+    closeButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        closeProjectDetails();
+      });
+    });
+    
+    // Close project details when clicking outside the project content
+    projectDetailsContainer.addEventListener('click', function(e) {
+      // Check if the click was directly on the container (background) and not on its children
+      if (e.target === projectDetailsContainer) {
+        closeProjectDetails();
+      }
+    });
+    
+    // Close project details function
+    function closeProjectDetails() {
+      projectDetails.forEach(project => {
+        project.classList.remove('active');
+      });
+      projectDetailsContainer.classList.remove('active');
+      document.body.classList.remove('project-open');
+    }
+    
+    // Add keyboard support for ESC key to close project
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && document.body.classList.contains('project-open')) {
+        closeProjectDetails();
+      }
+    });
+    
+    // Media tabs functionality
+    const mediaTabs = document.querySelectorAll('.media-tab');
+    
+    mediaTabs.forEach(tab => {
+      tab.addEventListener('click', function() {
+        const targetId = this.getAttribute('data-target');
+        const tabsContainer = this.closest('.media-tabs');
+        const contentContainer = this.closest('.project-media');
+        
+        // Remove active class from all tabs in this container
+        tabsContainer.querySelectorAll('.media-tab').forEach(t => {
+          t.classList.remove('active');
+        });
+        
+        // Remove active class from all content in this container
+        contentContainer.querySelectorAll('.media-content').forEach(c => {
+          c.classList.remove('active');
+        });
+        
+        // Add active class to clicked tab and target content
+        this.classList.add('active');
+        document.getElementById(targetId).classList.add('active');
+      });
+    });
+  });
+</script>
+
 
     <section id="contact-section" class="section contact">
       <h2><span>🤝</span> Connect with Me <span>🤝</span></h2>
