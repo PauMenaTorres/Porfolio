@@ -173,7 +173,6 @@ header h1 {
 header p {
     font-size: 1.2rem;
     color: #b0b0b0;
-    animation: smoothFade 1.5s ease-in-out;
 }
 
 main {
